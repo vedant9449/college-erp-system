@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College ERP System - Demonstration & Viva Voce Guide</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+        @page {
+            size: A4;
+            margin: 18mm 18mm 18mm 18mm;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b;
+            background-color: #ffffff;
+            line-height: 1.6;
+            font-size: 13.5px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: #2563eb;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            border: 1px solid #bfdbfe;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin: 24px 0 12px 0;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3 {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #0f172a;
+            margin: 16px 0 8px 0;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+        }
+
+        ul, ol {
+            margin: 0 0 12px 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .callout {
+            background-color: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 12px 14px;
+            border-radius: 0 6px 6px 0;
+            margin: 12px 0;
+            page-break-inside: avoid;
+        }
+
+        .callout-title {
+            font-weight: 700;
+            color: #15803d;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
+        .quote-box {
+            background-color: #f1f5f9;
+            border-left: 4px solid #3b82f6;
+            padding: 10px 14px;
+            margin: 8px 0;
+            font-style: italic;
+            color: #334155;
+            border-radius: 0 6px 6px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            font-size: 12.5px;
+            page-break-inside: avoid;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: #334155;
+            font-weight: 700;
+            text-align: left;
+            padding: 8px 10px;
+            border: 1px solid #cbd5e1;
+        }
+
+        td {
+            padding: 8px 10px;
+            border: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .action-tag {
+            font-weight: 700;
+            color: #dc2626;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+        }
+
+        .say-tag {
+            font-weight: 700;
+            color: #2563eb;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <span class="badge">Syllabus Compliant Academic Project</span>
+        <h1>College ERP System — Viva & Demo Guide</h1>
+        <p class="subtitle">Complete Presentation Walkthrough, Script, Database Architecture & Viva Voce Q&A</p>
+    </div>
+
+    <h2>1. Pre-Demonstration Setup (1-Minute Preparation)</h2>
+    <div class="card">
+        <ol>
+            <li><strong>Start Services in XAMPP</strong>:
+                <ul>
+                    <li>Open <strong>XAMPP Control Panel</strong>.</li>
+                    <li>Click <strong>Start</strong> next to <strong>MySQL</strong> (Port 3306, turns green).</li>
+                    <li>Click <strong>Start</strong> next to <strong>Apache</strong> (Ports 80/443, turns green).</li>
+                </ul>
+            </li>
+            <li><strong>Open phpMyAdmin in Browser</strong>:
+                <ul>
+                    <li>Open Chrome or Edge and navigate to: <code>http://localhost/phpmyadmin</code></li>
+                    <li>Click on <strong><code>college_erp</code></strong> in the left database list. Keep this tab open.</li>
+                </ul>
+            </li>
+            <li><strong>Open Project in VS Code</strong>:
+                <ul>
+                    <li>Launch VS Code ➔ <strong>File ➔ Open Folder...</strong></li>
+                    <li>Select: <code>C:\Users\Vedant\.gemini\antigravity-ide\scratch\college-erp-system</code></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <h2>2. Step-by-Step Presentation Script (What to Show & Say)</h2>
+
+    <div class="card">
+        <h3>Step 1: Application Launch & Architecture</h3>
+        <p><span class="action-tag">ACTION:</span> In File Explorer, double-click <code>run.bat</code>.</p>
+        <div class="quote-box">
+            <span class="say-tag">WHAT TO SAY:</span><br>
+            "Sir, this is our desktop College ERP system. It is engineered strictly using Java Swing for the graphical user interface and Native JDBC DriverManager for MySQL persistence. There are zero third-party ORM frameworks like Hibernate or Spring Boot, strictly fulfilling our core syllabus guidelines."
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Step 2: Admin Authentication</h3>
+        <p><span class="action-tag">ACTION:</span> Click <strong>⚙ Database Settings</strong> to display the active host (localhost:3306), then sign in with <code>admin</code> / <code>admin123</code>.</p>
+        <div class="quote-box">
+            <span class="say-tag">WHAT TO SAY:</span><br>
+            "The system uses role-based authentication. User credentials are authenticated using JDBC PreparedStatement to defend against SQL injection attacks. There are three roles: Administrator, Faculty, and Student."
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Step 3: Add a Student & Prove Database Storage</h3>
+        <p><span class="action-tag">ACTION:</span> 
+            1. Click <strong>Student Records</strong>.<br>
+            2. Fill in the form: Roll: <code>CS2026099</code>, Name: <code>Aarav Mehta</code>, Dept: <code>Computer Science</code>, Sem: <code>4</code>.<br>
+            3. Click <strong>Add Student</strong>.<br>
+            4. <strong>Switch to your browser</strong> showing <strong>phpMyAdmin</strong>, click the <code>students</code> table, and show Sir that Aarav Mehta is physically saved in the MySQL database!
+        </p>
+        <div class="quote-box">
+            <span class="say-tag">WHAT TO SAY:</span><br>
+            "Whenever a record is submitted, the StudentDAO class executes an INSERT query through JDBC PreparedStatement. The data is permanently written into our MySQL relational database under the students table."
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Step 4: Faculty & Course Catalog (OOP Inheritance)</h3>
+        <p><span class="action-tag">ACTION:</span> Click <strong>Faculty Directory</strong> and <strong>Course Catalog</strong> to show courses linked with instructor names.</p>
+        <div class="quote-box">
+            <span class="say-tag">WHAT TO SAY:</span><br>
+            "In our Java object model, both Student and Faculty inherit from an abstract base class Person.java using super() constructor chaining. This demonstrates core Object-Oriented Programming principles: inheritance, encapsulation, and polymorphism."
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Step 5: Attendance Register & 75% Audit Rule</h3>
+        <p><span class="action-tag">ACTION:</span> Select student <strong>Rahul Sharma</strong> and click <strong>Check Student %</strong> to show percentage audit and eligibility. Mark today's attendance and click <strong>Record Attendance</strong>.</p>
+        <div class="quote-box">
+            <span class="say-tag">WHAT TO SAY:</span><br>
+            "The system performs an automated 75% attendance audit to verify whether a student is legally permitted to appear for end-semester examinations."
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Step 6: Examinations & Automated Letter Grading</h3>
+        <p><span class="action-tag">ACTION:</span> Click <strong>Examinations & Marks</strong>, enter <code>88</code> / 100, and show the computed letter grade <code>A</code>.</p>
+        <div class="quote-box">
+            <span class="say-tag">WHAT TO SAY:</span><br>
+            "Exam evaluation uses business logic in Exam.computeGrade() to translate raw numeric marks into standard university letter grades."
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Step 7: Fee Processing & Custom FeeException (Key Highlight!)</h3>
+        <p><span class="action-tag">ACTION:</span> 
+            1. Go to <strong>Fee Ledger</strong>, select <strong>Priya Patel</strong> (Pending balance ₹20,000).<br>
+            2. Click <strong>Process Payment</strong> and enter an invalid overpayment like <code>50000</code>.<br>
+            3. Show the triggered <strong>FeeException dialog</strong>: <em>'Payment exceeds due balance'</em>.<br>
+            4. Now enter <code>5000</code> and submit. Balance decrements to ₹15,000!
+        </p>
+        <div class="quote-box">
+            <span class="say-tag">WHAT TO SAY:</span><br>
+            "Here we implemented a custom checked exception FeeException.java and database transaction management with setAutoCommit(false), commit(), and rollback(). If a transaction fails or exceeds balance, rollback() guarantees ACID integrity so account records never corrupt."
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Step 8: Student & Faculty Portal Logins</h3>
+        <p><span class="action-tag">ACTION:</span> Log out and sign in with <code>student1</code> / <code>student123</code>. Show that administrative editing tools are disabled.</p>
+        <div class="quote-box">
+            <span class="say-tag">WHAT TO SAY:</span><br>
+            "Access control dynamically adjusts GUI privileges based on the authenticated user's role."
+        </div>
+    </div>
+
+    <h2>3. Where and How Is Data Stored? (Crucial Viva Concept)</h2>
+    <div class="card">
+        <p><strong>Sir's Question:</strong> <em>"Where is the data stored? In which file is it kept?"</em></p>
+        <div class="quote-box">
+            <span class="say-tag">EXACT ANSWER:</span><br>
+            "Sir, the application does not store data in plain text or CSV files. It uses a relational database management system (RDBMS), specifically MySQL / MariaDB running locally via XAMPP on port 3306.<br><br>
+            The database name is <strong>college_erp</strong>, containing 7 normalized relational tables:<br>
+            1. <strong>users</strong>: Authentication credentials and roles.<br>
+            2. <strong>students</strong>: Student demographics, roll numbers, semesters, and departments.<br>
+            3. <strong>faculty</strong>: Instructor directories, designations, and salaries.<br>
+            4. <strong>courses</strong>: Course catalog with foreign keys referencing faculty.<br>
+            5. <strong>attendance</strong>: Daily lecture attendance records linked to students & courses.<br>
+            6. <strong>exams</strong>: Assessment marks, maximum marks, and computed letter grades.<br>
+            7. <strong>fees</strong>: Institutional billing ledgers, paid amounts, and due balances.<br><br>
+            The physical data files are managed by MySQL's InnoDB storage engine at <code>C:\xampp\mysql\data\college_erp\</code>. We can inspect and manage all tables visually via phpMyAdmin at <code>http://localhost/phpmyadmin</code>."
+        </div>
+    </div>
+
+    <h2>4. How to Open & Present Code in VS Code</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>File Path</th>
+                <th>Concept Demonstrated</th>
+                <th>What to Highlight in Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>src/com/college/db/DBConnection.java</code></td>
+                <td>Native JDBC Architecture</td>
+                <td>Show <code>DriverManager.getConnection(...)</code> and static driver loading</td>
+            </tr>
+            <tr>
+                <td><code>src/com/college/dao/StudentDAO.java</code></td>
+                <td>SQL Injection Defense</td>
+                <td>Show <code>PreparedStatement</code> with <code>?</code> placeholders and <code>ResultSet</code> mapping</td>
+            </tr>
+            <tr>
+                <td><code>src/com/college/model/Person.java</code> &amp; <code>Student.java</code></td>
+                <td>OOP Inheritance &amp; Polymorphism</td>
+                <td>Show <code>abstract class Person</code>, <code>class Student extends Person</code>, and <code>super(...)</code></td>
+            </tr>
+            <tr>
+                <td><code>src/com/college/dao/FeeDAO.java</code></td>
+                <td>ACID Transactions &amp; Exceptions</td>
+                <td>Show <code>setAutoCommit(false)</code>, <code>commit()</code>, <code>rollback()</code>, and <code>FeeException</code></td>
+            </tr>
+            <tr>
+                <td><code>src/com/college/gui/LoginFrame.java</code></td>
+                <td>Java Swing &amp; Event Listeners</td>
+                <td>Show <code>JFrame</code>, <code>ActionListener</code>, layout managers, and <code>JOptionPane</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>5. Top Viva Questions & Model Answers</h2>
+    <div class="card">
+        <p><strong>Q1: Why did you use PreparedStatement instead of regular Statement?</strong></p>
+        <p><em>Answer:</em> "PreparedStatement pre-compiles SQL queries on the database server, offering faster execution for repetitive calls. More importantly, it uses parameterized placeholders (<code>?</code>) that automatically sanitize user input, completely preventing SQL injection vulnerabilities."</p>
+
+        <p><strong>Q2: What is JDBC and how does it work in your project?</strong></p>
+        <p><em>Answer:</em> "JDBC (Java Database Connectivity) is a standard Java API that bridges Java applications with relational databases. In our project, <code>DriverManager.getConnection()</code> establishes a TCP connection to MySQL on port 3306 using the <code>mysql-connector-j</code> driver jar in our <code>lib/</code> directory."</p>
+
+        <p><strong>Q3: What is the purpose of the DAO (Data Access Object) pattern?</strong></p>
+        <p><em>Answer:</em> "The DAO pattern decouples presentation code (Swing GUI) from persistence logic (SQL queries). If we ever need to modify the database schema or SQL queries, we only touch DAO classes without altering GUI panels."</p>
+
+        <p><strong>Q4: How did you ensure ACID properties in financial transactions?</strong></p>
+        <p><em>Answer:</em> "In <code>FeeDAO.java</code>, we disable autocommit (<code>conn.setAutoCommit(false)</code>). We validate the payment against the student's due balance. If valid, we update the ledger and call <code>conn.commit()</code>. If an invalid amount is entered, a custom <code>FeeException</code> is raised and <code>conn.rollback()</code> is executed, preserving database consistency."</p>
+
+        <p><strong>Q5: What is the difference between checked and unchecked exceptions in Java?</strong></p>
+        <p><em>Answer:</em> "Checked exceptions (like <code>SQLException</code> and our custom <code>FeeException</code>) extend <code>java.lang.Exception</code> and are enforced at compile time with mandatory <code>try-catch</code> or <code>throws</code> clauses. Unchecked exceptions extend <code>RuntimeException</code> and occur during execution (like <code>NullPointerException</code>)."</p>
+    </div>
+
+    <h2>6. Post-Presentation Workflow & MySQL Handling</h2>
+    <div class="callout">
+        <div class="callout-title">MySQL &amp; XAMPP State After Finishing</div>
+        <ul>
+            <li><strong>Should you stop MySQL after showing the project?</strong> Yes. When you are done for the day or closing your laptop, simply open the <strong>XAMPP Control Panel</strong> and click <strong>Stop</strong> on MySQL and Apache.</li>
+            <li><strong>Will closing MySQL or shutting down the computer erase records?</strong> No. MySQL commits and flushes all records to persistent disk storage (<code>.ibd</code> data files). All newly added students, fee payments, and attendance logs remain permanently saved.</li>
+            <li><strong>Starting again for the next demonstration:</strong> Open XAMPP Control Panel ➔ click <strong>Start</strong> on MySQL ➔ double-click <code>run.bat</code>.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

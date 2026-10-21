@@ -1,0 +1,7 @@
+# College ERP Database Configuration Template
+# Default XAMPP settings: root with blank password on port 3306
+db.host=localhost
+db.port=3306
+db.name=college_erp
+db.user=root
+db.password=
